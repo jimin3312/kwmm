@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintDimensionRatio="w, 1.6:1"
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_email"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/email"
+
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/img_email"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/find_etxt_email"
+        android:hint="이메일"
+        android:inputType="text"
+        />
+    <TextView
+        android:id="@+id/find_txt_authentication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증"
+        android:textSize="20dp"
+        android:textColor="#FF7500"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/find_etxt_email"
+        app:layout_constraintBottom_toBottomOf="@+id/img_email"
+
+        />
+    <TextView
+        android:textColor="#FF0000"
+        android:id="@+id/find_txt_email_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/find_etxt_email"
+        app:layout_constraintLeft_toLeftOf="@+id/find_etxt_email"
+        />
+    <ImageView
+        android:id="@+id/img_authentication"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/authentication"
+
+        app:layout_constraintTop_toBottomOf="@id/find_txt_email_check"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/img_authentication"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/find_txt_email_check"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/find_etxt_authentication"
+        android:hint="인증번호"
+        android:inputType="text"
+        />
+
+    <TextView
+
+        android:textColor="#FF0000"
+        android:id="@+id/find_txt_authentication_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증번호 불일치"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/find_etxt_authentication"
+        app:layout_constraintLeft_toLeftOf="@+id/find_etxt_authentication"
+        />
+    <Button
+        android:id="@+id/find_btn_next"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="다음 단계"
+        app:layout_constraintTop_toBottomOf="@id/find_etxt_authentication"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="#FF7500"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        />
+</android.support.constraint.ConstraintLayout>

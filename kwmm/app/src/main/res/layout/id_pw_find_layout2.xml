@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintDimensionRatio="w, 1.6:1"
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <LinearLayout
+        android:id="@+id/id_pw_find_linearlayout_id"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원님의 아이디는"
+            android:textSize="20dp"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/id_pw_find_txt_id"
+                android:text="아이디"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF7500"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입니다"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/id_pw_find_linearlayout_pw"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/id_pw_find_linearlayout_id"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="임시비밀번호를 발급받으시려면"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/id_pw_find_txt_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이곳"
+                android:textSize="20dp"
+                android:textColor="#FF7500"
+                android:textIsSelectable="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="을 눌러주세요"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_pw_find_linearlayout_temporary_number"
+        android:visibility="gone"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/id_pw_find_linearlayout_id"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="임시비밀번호 : "
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/id_pw_find_txt_temporary_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="임시비밀번호"
+            android:textColor="#FF7500"
+            android:textSize="20dp"
+            android:textIsSelectable="true"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

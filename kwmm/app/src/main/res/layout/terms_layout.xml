@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/terms_logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/logo3"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ScrollView
+        android:overScrollMode="never"
+        android:id="@+id/terms_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <TextView
+            android:textSize="15dp"
+            android:padding="8dp"
+            android:background="@drawable/square_border_ff7500"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/terms"
+            />
+    </ScrollView>
+
+    <TextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/terms_img_check"
+        app:layout_constraintBottom_toBottomOf="@+id/terms_img_check"
+        android:id="@+id/terms_private_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="이용약관에 동의 하시겠습니까?"
+        />
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/terms_img_check"
+        app:layout_constraintTop_toBottomOf="@+id/terms_text"
+        app:layout_constraintLeft_toRightOf="@+id/terms_private_agree"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/terms_not_checked"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@+id/terms_img_check"
+        app:layout_constraintTop_toBottomOf="@+id/terms_private_agree"
+        android:id="@+id/terms_txt_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다음"
+        android:textColor="#AAAAAA"
+        />
+</android.support.constraint.ConstraintLayout>

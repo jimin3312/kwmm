@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_review_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_review_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/img_review_profile"
+            android:text="abc"
+            android:textSize="12dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            />
+
+
+        <RatingBar
+            android:theme="@style/RatingBar"
+            android:id="@+id/review_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/img_review_profile"
+            app:layout_constraintLeft_toLeftOf="@id/txt_review_nickname" />
+
+        <TextView
+            android:id="@+id/txt_review_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="12시 30분"
+            android:textColor="#999999"
+            app:layout_constraintLeft_toLeftOf="@id/review_rating"
+            app:layout_constraintTop_toBottomOf="@id/review_rating"
+            />
+
+        <TextView
+            android:id="@+id/txt_review_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="식당"
+            app:layout_constraintRight_toLeftOf="@+id/txt_review_menu"
+            android:layout_marginRight="10dp"
+            android:textSize="11dp"
+            android:textColor="#999999"
+            />
+
+        <TextView
+            android:id="@+id/txt_review_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메뉴이름"
+            app:layout_constraintRight_toLeftOf="@+id/txt_review_report"
+            android:layout_marginRight="15dp"
+            android:textSize="11dp"
+            android:textColor="#999999"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/review_linear_layout"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/txt_review_menu"
+            app:layout_constraintRight_toLeftOf="@+id/txt_review_report"
+            android:layout_marginRight="5dp"
+            >
+
+                <ImageView
+                    android:id="@+id/review_img_thum_up"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/thumb_up_ff7500"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_review_thum_up_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="112"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_review_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신고"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/img_review_image"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_review_time"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/txt_review_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/img_review_image"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="123123123123123123"
+            />
+
+</android.support.constraint.ConstraintLayout>

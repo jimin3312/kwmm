@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/restaurant_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:background="#FFFFFF"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/txt_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:text="타이틀"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_restaurant_name"
+                app:layout_constraintVertical_bias="0.1">
+
+
+                <RatingBar
+                    android:paddingTop="4dp"
+                    android:id="@+id/restaurant_rating"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:background="#FFFFFF"
+                    android:numStars="5"
+                    android:rating="0.0"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/restaurant_rating"
+                    android:id="@+id/txt_restaurant_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="0.0"
+                    android:textSize="17dp"
+                    android:textColor="#000000" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/restaurant_tab"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:layout_gravity="bottom"
+            android:background="@drawable/square_border"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:tabIndicatorColor="#FF7500"
+            app:tabSelectedTextColor="#FF7500"
+            app:tabTextColor="#000000"></android.support.design.widget.TabLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:overScrollMode="never"
+        android:background="#FFFFFF"
+        android:id="@+id/restaurant_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_app_bar"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

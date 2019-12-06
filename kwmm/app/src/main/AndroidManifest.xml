@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kwmm0">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon2"
+        android:label="뭐먹"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.kwmm0.Main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="">
+        </activity>
+        <activity android:name="com.kwmm0.Login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.kwmm0.Notice.NoticeContentActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.kwmm0.Notice.NoticeActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.kwmm0.WriteReviewActivity"
+            android:label="리뷰">
+
+        </activity>
+        <activity
+            android:name="com.kwmm0.Login.SignUpActivity"
+            android:label="회원가입"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Login.SignUpActivity2"
+            android:label="회원가입"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+        </activity>
+        <activity android:name="com.kwmm0.Login.TermsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity android:name="com.kwmm0.Main.StartActivity"
+            android:noHistory="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.kwmm0.Restaurant.RestaurantActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+        </activity>
+        <activity android:name="com.kwmm0.Restaurant.LocationInfo"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Category.CategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="카테고리">
+
+
+        </activity>
+        <activity android:name="com.kwmm0.MyReview.MyReviewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Restaurant.MenuReview"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.kwmm0.ImageExpandActivity"/>
+        <activity android:name="com.kwmm0.MyEditProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+        </activity>
+        <activity android:name="com.kwmm0.Login.IdPwFindActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Login.IdPwFindActivity2"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Main.UsedIconActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.kwmm0.Main.PrivateActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC0DK5n39oI3JDSJQLkRqR8VxwYOENSP34"
+            />
+    </application>
+
+</manifest>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="w, 1.6:1"
+        />
+    <ImageView
+        android:id="@+id/img_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/id"
+
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/img_id"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/sign_up_etxt_id"
+        android:hint="아이디"
+        android:inputType="text"
+        />
+    <ImageView
+        android:id="@+id/img_nickname"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/id"
+
+        app:layout_constraintTop_toBottomOf="@id/sign_up_id_confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/img_nickname"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_id_confirm"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/sign_up_etxt_nickname"
+        android:hint="닉네임"
+        android:inputType="text"
+        />
+
+    <ImageView
+        android:id="@+id/img_password"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/key"
+
+        app:layout_constraintTop_toBottomOf="@id/sign_up_nickname_confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/img_nickname"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_nickname_confirm"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/sign_up_etxt_password"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/sign_up_btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="회원가입"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_pw_confirm"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="#FF7500"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:onClick="onClick"
+        />
+
+    <TextView
+        android:id="@+id/sign_up_nickname_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디 확인"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="@id/sign_up_etxt_nickname"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@id/img_nickname"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/sign_up_id_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디 확인"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="@id/sign_up_etxt_id"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@id/img_id"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/sign_up_pw_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디 확인"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="@id/sign_up_etxt_id"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@id/img_password"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_check_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_id"
+        app:layout_constraintRight_toRightOf="@id/sign_up_etxt_id"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:id="@+id/sign_up_img_id_check"
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_check_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_nickname"
+        app:layout_constraintRight_toRightOf="@id/sign_up_etxt_nickname"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:id="@+id/sign_up_img_nickname_check"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

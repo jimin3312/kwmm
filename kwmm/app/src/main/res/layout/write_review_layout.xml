@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:layout_constraintHeight_percent="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RatingBar
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img_food_review"
+        android:id="@+id/review_rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:isIndicator="false">
+    </RatingBar>
+
+    <ImageView
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_rating_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/img_food_review"
+        android:padding="10dp"
+        android:src="@drawable/ic_camera_alt_black_24dp"
+        android:onClick="onClick"
+        />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:background="@drawable/square_border"
+        android:id="@+id/etxt_review_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:hint="내용을 입력하세요."
+        app:layout_constraintBottom_toTopOf="@id/btn_review_complete"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_food_review"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:background="#FF7500"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/btn_review_complete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClick"
+        android:text="리뷰 올리기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="138dp" />
+</android.support.constraint.ConstraintLayout>
